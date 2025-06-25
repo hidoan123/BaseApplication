@@ -27,6 +27,10 @@ abstract class BaseRecyclerViewAdapter<T, VB : ViewBinding> :
 
     override fun getItemCount() = items.size
 
+    override fun getItemViewType(position: Int): Int {
+        return super.getItemViewType(position)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = BaseViewHolder<VB,T>(
         DataBindingUtil.inflate(
             LayoutInflater.from(parent.context), getLayoutId(viewType), parent, false

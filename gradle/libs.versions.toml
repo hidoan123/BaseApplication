@@ -53,6 +53,7 @@ groupie = "2.8.1"
 glide="4.16.0"
 parcelize = "1.8.10"
 media3CommonKtx = "1.5.0"
+navigationRuntimeAndroid = "2.9.0"
 
 
 
@@ -124,3 +125,4 @@ mobile-ffmpeg-full-gpl = { module = "com.arthenica:mobile-ffmpeg-full-gpl", vers
 #Logging And Debug Tools
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
+androidx-navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }

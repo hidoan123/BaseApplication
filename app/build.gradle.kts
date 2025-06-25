@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.hiltAndroid)
     alias(libs.plugins.google.devtoolsKsp)
 }
 
@@ -47,6 +48,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.runtime.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -71,8 +73,8 @@ dependencies {
     ksp(libs.glide.ksp)
     implementation(libs.lottie)
     //GroupieAdapter
-    implementation(libs.groupie)
-    implementation(libs.groupie.viewbinding)
+//    implementation(libs.groupie)
+//    implementation(libs.groupie.viewbinding)
     //Dimens
     implementation(libs.sdp.android)
     //tbuomono dotIndicator
