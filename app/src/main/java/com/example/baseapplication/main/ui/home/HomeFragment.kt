@@ -29,6 +29,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun setupUI() {
         super.setupUI()
         observerData()
+
+    }
+
+    override fun setupListener() {
+        super.setupListener()
+
     }
 
     private fun observerData() {
