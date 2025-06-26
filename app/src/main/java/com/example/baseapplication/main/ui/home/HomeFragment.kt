@@ -36,6 +36,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun setupData() {
         super.setupData()
 
+
+
     }
     override fun setupListener() {
         super.setupListener()
