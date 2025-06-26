@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - develop
-      - main
+      - master
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Build APK
         run: |
-          if [ "${{ github.ref_name }}" = "main" ]; then
+          if [ "${{ github.ref_name }}" = "master" ]; then
             ./gradlew clean assembleRelease
           elif [ "${{ github.ref_name }}" = "develop" ]; then
             ./gradlew clean assembleDebug
