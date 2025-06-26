@@ -31,6 +31,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         observerData()
     }
 
+
+    override fun setupListener() {
+        super.setupListener()
+
+    }
     private fun observerData() {
     lifecycleScope.launch {
         repeatOnLifecycle(Lifecycle.State.STARTED) {
