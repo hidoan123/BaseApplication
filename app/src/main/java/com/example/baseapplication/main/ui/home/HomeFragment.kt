@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.baseapplication.R
 import com.example.baseapplication.common.fragment.BaseFragment
@@ -30,7 +32,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun observerData() {
-
+    lifecycleScope.launch {
+        repeatOnLifecycle(Lifecycle.State.STARTED) {
+            viewModel.uiState.collect {
+                when (it) {
+                    is HomeUIState.Loading -> {
+                    }
+                    is HomeUIState.Success -> {
+                    }
+                    is HomeUIState.Error -> {
+                    }
+                }
+            }
+        }
+    }
     }
 
 
